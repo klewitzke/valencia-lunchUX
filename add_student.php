@@ -281,7 +281,7 @@ if((count($_SESSION['children'])==0)||(isset($_GET['editId']))){
 	echo(' style="display:none;"');
 }
 ?>
-><i class="fa fa-plus"></i> Add Child</button>
+><i class="fa fa-plus"></i> Add Student</button>
 </div>
 <button tabindex="5" class="nav-prev" onClick="parent.location='case.php'; return false;"><i class="fa fa-arrow-left"></i><br />Previous<br />Step</button>
 <?php
