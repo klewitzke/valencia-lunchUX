@@ -1,0 +1,367 @@
+* {
+	margin: 0px;
+
+}
+
+html {
+	height: 0 !important;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 5px 5px 5px 5px;
+	font-size: 24px;
+	text-align: center;
+
+}
+
+h2, p {
+	padding-bottom: 15px;
+}
+
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	opacity: 0.7;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], select {
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	width: 100%;
+	margin-bottom: 5px;
+	text-align: center;
+	text-align-last: center;
+	-ms-text-align-last: center;
+	border: 1px solid #d9d9d9;
+	padding: 0;
+}
+
+
+input:focus, select:focus {
+	border: 1px solid #4D90FE;
+	box-shadow: 0 0 4px #4D90FE;
+}
+
+input.opt1-wage, input.opt2-wage, input.opt3-wage, input.opt4-wage, input.opt5-wage, select.opt1-frequency, select.opt2-frequency, select.opt3-frequency, select.opt4-frequency, select.opt5-frequency{
+	width: 100%;
+	font-size: 20px;
+	height: 28px;
+	margin:0;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+	font-size:24px;
+	border-radius: 5px;
+	padding: 5px;
+	border: none;
+	margin: 5px;
+}
+
+button:hover, .child-row, .adult-row, .child-name, .adult-name, .income {
+	cursor: pointer;
+}
+
+button.add {
+	width: 95%;
+	color: #ffffff;
+	background: rgba(0,0,255,0.75);
+}
+
+button.cancel {
+	width: 95%;
+	background: #e0e0e0;
+}
+
+button.cancel:active, button.nav-prev:active {
+	background-color: lightgray;
+}
+
+button.delete {
+	width: 95%;
+	color: #ffffff;
+	background: rgba(255,0,0,0.75);
+	margin-top: 5px;
+}
+
+button.option, button.radio {
+	width: 100%;
+	color: darkgray;
+	background: rgba(255,255,255,0.75);
+	border: 1px solid darkgray;
+	text-align: center;
+	display:inline-block;
+	vertical-align:middle;
+	max-width: 250px;
+	min-height: 70px;
+
+}
+
+div.option-full {
+	display:block;
+	width:95%;
+	color: dimgray;
+	background: rgba(255,255,255,0);
+	/* background: #e0e0e0; */
+	border: 1px solid darkgray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding:5px;
+	border-radius:5px;
+}
+
+div.option-full-text {
+	display: inline-block;
+	width:100%;
+}
+
+div.option-full-text:hover {
+	cursor:pointer;
+}
+
+.option.selected, .radio.selected, .option-full.selected {
+	color: #fff;
+	background: rgba(0,0,255,0.75);
+	border: 1px solid rgba(0,0,255,0.25);
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.child-row.selected, .adult-row.selected, .child-row-2.selected, .adult-row-2.selected {
+	background:yellow;
+}
+
+.child-row, .adult-row, .child-row-2, .adult-row-2 {
+	background:white;
+}
+
+button.delete:active {
+	background: darkred;
+}
+
+button.nav-next {
+	font-size: 24px;
+	width: 40%;
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: rgba(0,0,255,0.75);
+	text-decoration: none;
+	border: none;
+	padding: 5px;
+}
+
+button.nav-next:active, button.add:active {
+	background: darkblue;
+}
+
+button.nav-prev:active {
+	background: #e0e0e0;
+}
+
+button.nav-prev {
+	font-size: 24px;
+	width: 40%;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.75);
+	text-decoration: none;
+	border: none;
+	padding: 5px;
+}
+
+table {
+	font-size: inherit;
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 5px;
+}
+
+table.persons tr {
+	border: 1px solid darkgray;
+	padding: 2px 5px 2px 5px ;
+}
+
+table.persons th {
+	background-color: #E0E4CC;
+}
+
+table.persons tr:first-child {
+	box-shadow: 0px 0px 1px #888;
+}
+
+.ui-progressbar-value {
+	background: lime;
+	background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+}
+
+.hidden {
+	display: none;
+}
+
+#info-q:hover {
+	cursor: pointer;
+}
+
+#main, #disclaimer {
+	background-color: rgba(255, 255, 255, 0.75);
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-container {
+	display: inline-block;
+	margin-top: 5px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+#info-box {
+	border: 1px solid #4d90fe;
+	background-color: white;
+	box-shadow: 0 0 4px #4D90FE;
+	font-family: 'Roboto', sans-serif;
+	padding: 3px;
+	margin: 5px 0px 5px 0px;
+}
+
+.warning-box {
+	background-color: lightpink;
+	border: 1px solid red;
+	padding: 3px;
+	color: red;
+}
+
+#google_translate_element {
+	display:none;
+}
+
+#google_translate_element select {
+	text-align: left;
+}
+
+table.progress {
+	margin-bottom: 25px;
+}
+
+
+table.progress tr td.step {
+	background-color: rgba(222,222,222,0.75);
+	text-align: center;
+	border-radius: 5px;
+	margin: 5px;
+	font-size: 16px;
+	width:12.5%;
+}
+
+table.progress tr td.step-complete {
+	background-color: rgba(0,255,0,0.75);
+	text-align: center;
+	border-radius: 5px;
+	margin: 5px;
+	font-size: 16px;
+	width:12.5%;
+}
+
+table.progress tr td.step-complete-gray {
+	background-color: rgba(222,222,222,0.75);
+	text-align: center;
+	border-radius: 5px;
+	margin: 5px;
+	font-size: 16px;
+	width:12.5%;
+}
+
+table.progress tr td.caret {
+	color: rgba(222,222,222,0.75);
+	border: 0px;
+	width: 0px;
+	padding: 0 5 0 5;
+	/* text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray; */
+}
+
+table.progress tr td.caret-complete {
+	color: rgba(0, 255, 0, 0.9);
+	border: 0px;
+	width: 0px;
+	padding: 0 5 0 5;
+	/* text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray; */
+}
+
+table.progress tr td.step-complete:hover, table.progress tr td.step-complete-gray:hover {
+	cursor: pointer;
+}
+
+table.progress tr td.step-complete:active {
+	background: green;
+}
+
+table.progress tr td.step-complete-gray:active {
+	background: #e0e0e0;
+}
+
+@media (max-width:770px) {
+	table.progress {
+		display:none;
+	}
+}
+
+a {
+	color:blue;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:active {
+	color: red;
+}
+
+#change-lang:hover, #lang-en:hover, #lang-es:hover, #lang-fr:hover, #lang-ge:hover, #remove:hover {
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+.condition-alert {
+	font-size: 14px;
+	color: green;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.income {
+	color:blue;
+}
+
+.income:hover {
+	text-decoration: underline;
+}
+
+.income:active {
+	color:red;
+}
+
+.dialog {
+	position: fixed;
+	border: 1px solid #4d90fe;
+	background-color: white;
+	box-shadow: 0 0 4px #4D90FE;
+	padding: 10px;
+	border-radius: 3px;
+	min-width: 300px;
+	max-width: 500px;
+	font-size: 18px;
+}
