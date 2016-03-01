@@ -307,7 +307,7 @@ if(!empty($_SESSION['email'])) echo('Email address: '.$_SESSION['email'].'<br />
 <span style="font-size:16px;font-weight:bold;color:red;">This application is being made in connection with the receipt of Federal funds. School officials may verify the information on the application. Deliberate misrepresentation of the information may subject you (the applicant) to prosecution under State and Federal statutes.</span><br />
 <b>Does the household's primary wage earner have a social security number?</b><br /><button id="yes" class="option" onClick="return false;">Yes</button><button id="no" class="option" onClick="return false;">No</button><br />
 <span id="legend" style="display:none;"><b>What are the last four (4) digits?</b><br /></span>
-<input type="text" name="last4ssn" id="last-4-ssn" autocomplete="off" style="display:none;" disabled /><p>
+<input type="tel" name="last4ssn" id="last-4-ssn" autocomplete="off" style="display:none;" disabled /><p>
 <div id="signature-block" style="display:none;" >
 <b>Confirm the information on this page is correct, then type your full name below:</b>
 <input tabindex="1" type="text" name="fullname" id="full-name" placeholder="Full name" style="margin-bottom:5px;" autocomplete="off" /><p>
