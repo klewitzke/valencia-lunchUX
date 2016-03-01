@@ -188,7 +188,11 @@ if(isset($_SESSION['adults'])) {
 			echo('<tr><td colspan="3">No reported income</td></tr>');
 		}
 		echo('</table>');
-		echo('<button class="add" style="width:45%" onClick="parent.location=\'hh_member_income.php?editId='.$key.'\'; return false;"><i class="fa fa-usd"></i> Modify</button><button class="cancel" style="width:45%;"><i class="fa fa-times"></i> Close</button>');
+		if($value[4]==1) {
+			echo('<button class="add" style="width:45%" onClick="parent.location=\'hh_member_income.php?editId='.$key.'\'; return false;"><i class="fa fa-usd"></i> Modify</button><button class="cancel" style="width:45%;"><i class="fa fa-times"></i> Close</button>');
+		} else {
+			echo('<button class="add" style="width:45%" onClick="parent.location=\'non_stu_child_income.php?editId='.$key.'\'; return false;"><i class="fa fa-usd"></i> Modify</button><button class="cancel" style="width:45%;"><i class="fa fa-times"></i> Close</button>');
+		}
 		echo('</div>');
 		$hasIncome = 0;
 	}

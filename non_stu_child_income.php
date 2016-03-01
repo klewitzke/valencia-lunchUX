@@ -166,7 +166,15 @@ if(isset($_GET['editId'])) {
 <div id="main-container">
 <div id="main">
 <form action="non_stu_child_income_process.php" id="form" method="post">
-
+<input type="hidden" name="edit_in_progress" value="
+<?php
+if(isset($_GET['editId'])) {
+	echo('1');
+} else {
+	echo('0');
+}
+?>
+" />
 <input type="hidden" name="earnings" id="earnings" />
 <b>Do any of the following apply to <u>
 <?php
@@ -303,14 +311,25 @@ if(isset($_GET['editId']) && $cat4==1) {
 " onClick="return false;"><div class="option-full-text" id="opt5-text">None of the above</div></div>
 
 </div>
-<button tabindex="7" class="nav-prev" onClick="parent.location='add_hh_member.php'; return false;"><i class="fa fa-arrow-left"></i><br />Previous<br />Step</button>
-<button tabindex="6" id="next" class="nav-next"
+<?php
+if(!isset($_GET['editId'])) {
+	echo('<button class="nav-prev" onClick="parent.location=\'add_hh_member.php\'; return false;"><i class="fa fa-arrow-left"></i><br />Previous<br />Step</button>');
+}
+?>
+<button id="next" class="nav-next"
 <?php
 if(!isset($_GET['editId'])) {
 	echo(' style="display:none;"');
 }
 ?>
- onClick="return false;"><i class="fa fa-arrow-right"></i><br />Next<br />Step</button>
+ onClick="return false;">
+<?php
+if(isset($_GET['editId'])) {
+	echo('<i class="fa fa-save"></i><br />Save</button>');
+} else {
+	echo('<i class="fa fa-arrow-right"></i><br />Next<br />Step</button>');
+}
+?>
 </form>
 <?php include('footer.php'); ?>
 </body>

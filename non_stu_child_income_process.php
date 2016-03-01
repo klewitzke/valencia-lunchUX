@@ -43,7 +43,10 @@ for($i=0;$i<count($_POST['opt4-wageamt']);$i++) {
 	array_push($_SESSION['Incomes'],$income);
 }
 
-if($_SESSION['AdultNumber']==(count($_SESSION['adults'])-1)){
+if($_POST['edit_in_progress']==1) {
+	header("Location:signature.php");
+	die();
+} elseif($_SESSION['AdultNumber']==(count($_SESSION['adults'])-1)){
 	header("Location:hh_member_income.php");
 	die();
 } else {
